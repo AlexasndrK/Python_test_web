@@ -1,0 +1,7 @@
+table, td, th {
+  color: brown;
+  border: 1px solid black;
+}
+.email {
+  text-align: right;
+}

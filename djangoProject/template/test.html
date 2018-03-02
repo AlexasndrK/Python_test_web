@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page for MTV testign</title>
+    <link rel="stylesheet" href="{% static "css/test.css"%}">
+  </head>
+  <body>
+    <h2>Let's get started</h2>
+    <div class="templclass">
+      {% if access %}
+      <table>
+        <thead>
+          <th>Site name</th>
+          <th>Access Date</th>
+        </thead>
+        {% for item in  access %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.date }}</td>
+          </tr>
+          {% endfor %}
+      </table>
+      {% else %}
+        <p>Something went wrong</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

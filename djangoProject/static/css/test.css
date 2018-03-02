@@ -1,0 +1,5 @@
+table, th, td {
+  color: green;
+  text-align: left;
+  border: 2px solid black;
+}

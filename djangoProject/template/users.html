@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>List of Users</title>
+    <link rel="stylesheet" href="{% static "css/users.css" %}">
+  </head>
+  <body>
+      <h4>List of Users</h4>
+      <div class="">
+        {% if userdata %}
+        <table>
+          <thead>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th class="email">Email</th>
+          </thead>
+          {% for user in userdata %}
+            <tr>
+              <td>{{ user.firstName }}</td>
+              <td>{{ user.secondName }}</td>
+              <td class="email">{{ user.email }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+        {% else %}
+          <p>Something went wrong!</p>
+        {% endif %}
+      </div>
+  </body>
+</html>
